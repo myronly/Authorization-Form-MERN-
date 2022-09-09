@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+@layer base {
+  body {
+    font-family: "Raleway", sans-serif;
+    background-image: url(./bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+  }
+}
+
+.form {
+  @apply w-72 flex items-center flex-col gap-5 font-medium absolute top-2/4 left-2/4 -translate-x-1/2 -translate-y-1/2;
+}
+
+.input {
+  @apply w-full px-3 py-2 rounded-lg bg-inherit outline-none border text-white;
+}
+
+.auth-button {
+  @apply bg-white rounded-md py-2 text-center hover:opacity-70 transition-all;
+}
